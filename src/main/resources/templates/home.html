@@ -18,9 +18,13 @@
 </head>
 <body>
 <div class="container">
-    <h1>
+    <h1 >
         Welcome to home page
     </h1>
+    <p> My name is <span data-th-text="${name}"></span></p>
+    <p>You can contact me on <span data-th-text="${email}"></span> </p>
+    <p>To post the letter refer address : <span data-th-text="${address}"></span> </p>
+    <a data-th-href="${githublink}"> Click here to open</a>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cupiditate dolorem doloremque earum expedita
         facilis molestiae temporibus vitae! Aspernatur dolor explicabo officia omnis porro suscipit veritatis voluptas!
         Amet in, suscipit.
