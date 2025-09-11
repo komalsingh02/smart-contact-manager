@@ -6,29 +6,38 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        .container{
-            margin:auto;
-            width:50%;
-            padding:30px;
-            background:#e2e2e2;
-        }
-    </style>
+    <link rel="stylesheet" th:href="@{/css/output.css}">
+<!--    <style>-->
+<!--        .container{-->
+<!--            margin:auto;-->
+<!--            width:50%;-->
+<!--            padding:30px;-->
+<!--            background:#e2e2e2;-->
+<!--        }-->
+<!--    </style>-->
+
 
 </head>
 <body>
-<div class="container">
-    <h1 >
+<div class=" bg-gray-200 text-2xl w-1/2 mx-auto mt-4 flex flex-col space-y-3 p-4 ">
+    <h1  class=" text-3xl font-bold">
         Welcome to home page
     </h1>
-    <p> My name is <span data-th-text="${name}"></span></p>
+    <p class="text-xl text-gray-700"> My name is <span data-th-text="${name}"></span></p>
     <p>You can contact me on <span data-th-text="${email}"></span> </p>
     <p>To post the letter refer address : <span data-th-text="${address}"></span> </p>
     <a data-th-href="${githublink}"> Click here to open</a>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cupiditate dolorem doloremque earum expedita
+    <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cupiditate dolorem doloremque earum expedita
         facilis molestiae temporibus vitae! Aspernatur dolor explicabo officia omnis porro suscipit veritatis voluptas!
         Amet in, suscipit.
     </p>
+    <div>
+        <button class="px-3 py-2 rounded bg-blue-700 text-white hover:bg-blue-600">
+            Click me
+        </button>
+    </div>
+
+
 </div>
 </body>
 </html>
