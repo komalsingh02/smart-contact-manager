@@ -5,9 +5,7 @@
 - Added Tailwind CSS styling to `home.html`:
     - Classes used: `bg-gray-200`, `text-2xl`, `w-1/2`, `mx-auto`, `mt-4`, `flex`, `flex-col`, `space-y-3`, `p-4`
     - Buttons styled with `px-3 py-2 rounded bg-blue-700 text-white hover:bg-blue-600`
-- Linked Tailwind CSS `output.css` using relative path:
-  ```html
-  <link rel="stylesheet" th:href="@{/css/output.css}">
+- Linked Tailwind CSS `output.css` using relative path:By adding  rel="stylesheet" th:href="@{/css/output.css}
 - Apply styling by running
   npx tailwindcss -i src/main/resources/static/css/input.css -o src/main/resources/static/css/output.css --watch
 
