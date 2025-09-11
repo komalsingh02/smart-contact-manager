@@ -1,3 +1,4 @@
+
 ## [0.0.2] - 2025-09-05
 ### Added
 - **PageController** updated to handle dynamic data with Thymeleaf.
