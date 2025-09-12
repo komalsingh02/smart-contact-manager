@@ -17,4 +17,20 @@ public class PageController {
         model.addAttribute("githublink","https://github.com/komalsingh02/smart-contact-manager");
         return "home";
     }
+
+    // about route
+    @RequestMapping("/about")
+    public String aboutPage()
+    {
+        System.out.println("about page loading");
+        return "about";
+    }
+    //services route
+    @RequestMapping("/services")
+    public String servicePage()
+    {
+        System.out.println("services page loading");
+        return "services";
+    }
+
 }
