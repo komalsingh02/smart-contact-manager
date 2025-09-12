@@ -6,20 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-<h1>This is Services Page</h1>
-<p th:insert="~{base::parent2(serviceone,sergtvicetwo)}"></p>
-<div th:insert="~{base::parent3(~{::p})}">
-    <p>
-        This is the content of the p
-    </p>
-</div>
-<section class="text-3xl bg-red-500">
-    <p>
-        This is the content of the p of section
-    </p>
-    <div>
-        This is the content of div of section
+
+<div>
+    <h1>This is Services Page</h1>
+    <p th:insert="~{base::parent2(serviceone,sergtvicetwo)}"></p>
+<!--    passing by tag-->
+    <div th:insert="~{base::parent3(~{::section})}">
+        <p>
+            This is the content of the p
+        </p>
     </div>
-</section>
+    <div th:insert="~{base::parent3(~{::p})}">
+        <section class="text-3xl bg-red-500">
+            <p>
+                This is the content of the p of section
+            </p>
+            <div>
+                This is the content of div of section
+            </div>
+            <button>Click me</button>
+        </section>
+    </div>
+
+<!--passing using id-->
+
+    <div th:replace="~{base::parent3(~{::#second_content})}">
+        <section id="second_content">
+            <div>
+                This is second content passed through class
+            </div>
+        </section>
+    </div>
+<!--passing using class-->
+    <div th:replace="~{base::parent3(~{::.third_content})}">
+        <section class="third_content">
+            <div>
+                This is third content passed through id
+            </div>
+        </section>
+    </div>
+</div>
+
 </body>
 </html>

@@ -9,6 +9,15 @@
 <h1>This is about page </h1>
 <div th:insert="~{base::parent1}"></div>
 <div th:insert="~{base::parent2(10,20)}"></div>
+<!--conditional rendering-->
+<div class="host-tag" th:replace=" ${isLogin}? ~{base::parent3(~{::section})}:~{base::test(~{::#not_loggedin})}">
+    <section id="sec">
+        User is logged In
+    </section>
+    <section id="not_loggedin">
+        <h1>User is not Logged In</h1>
+    </section>
+</div>
 
 </body>
 </html>
