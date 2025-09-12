@@ -1,0 +1,12 @@
+<div >
+    <-- Normal parents-->
+    <h1 th:fragment="parent1">
+        This is the parent Fragment from base.html file
+    </h1>
+    <--  parents with the x and y passed -->
+    <div th:fragment="parent2(x,y)">
+    <div>Value of x is <span th:text="${x}"> </span></div>
+    <div>Value of y is <span th:text="${y}"> </span></div>
+    </div>
+
+</div>
