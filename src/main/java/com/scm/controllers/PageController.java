@@ -20,8 +20,9 @@ public class PageController {
 
     // about route
     @RequestMapping("/about")
-    public String aboutPage()
+    public String aboutPage(Model modal)
     {
+        modal.addAttribute("isLogin",false);
         System.out.println("about page loading");
         return "about";
     }
