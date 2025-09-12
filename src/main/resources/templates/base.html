@@ -8,5 +8,8 @@
     <div>Value of x is <span th:text="${x}"> </span></div>
     <div>Value of y is <span th:text="${y}"> </span></div>
     </div>
-
+    <div th:fragment="parent3(content)">
+        <div th:replace="${content}">
+        </div>
+    </div>
 </div>
