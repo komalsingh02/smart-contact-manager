@@ -8,5 +8,18 @@
 <body>
 <h1>This is Services Page</h1>
 <p th:insert="~{base::parent2(serviceone,sergtvicetwo)}"></p>
+<div th:insert="~{base::parent3(~{::p})}">
+    <p>
+        This is the content of the p
+    </p>
+</div>
+<section class="text-3xl bg-red-500">
+    <p>
+        This is the content of the p of section
+    </p>
+    <div>
+        This is the content of div of section
+    </div>
+</section>
 </body>
 </html>
